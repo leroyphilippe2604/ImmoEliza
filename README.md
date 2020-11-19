@@ -1,6 +1,6 @@
 # ImmoEliza
 
-The resulting dataset before the first analysis is the following:
+Datas's types for API:
 information|column name|variable type|example(s) or description
 ---|---|---|---
 Source (team)|source|int|from 1 to 7|
