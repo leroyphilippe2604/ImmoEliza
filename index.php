@@ -128,6 +128,7 @@
     <?php
         if (!empty($_POST['post_code'])) (!empty($_POST['rooms_number'])) (!empty($_POST['garden'])) (!empty($_POST["area"])) (!empty($_POST["living_area"])) (!empty($_POST["bathrooms_number"]))  (!empty($_POST["parking"])) (!empty($_POST["pool"])) (!empty($_POST["type"]));
 
+        /* Variable */
         $postcode = $_POST['post_code'];
         $rooms = $_POST['rooms_number'];
         $garden = $_POST['garden'];
