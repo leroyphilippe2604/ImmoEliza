@@ -6,6 +6,9 @@
     <title>Home Dealer</title>
     <!--Boostrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--CSS File-->
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
     <!--Navbar-->
@@ -125,24 +128,6 @@
     
     <!--Footer-->
 
-    <!--php-->
-    <?php
-        if (!empty($_POST['post_code'])) (!empty($_POST['rooms_number'])) (!empty($_POST['garden'])) (!empty($_POST["area"])) (!empty($_POST["living_area"])) (!empty($_POST["bathrooms_number"]))  (!empty($_POST["parking"])) (!empty($_POST["pool"])) (!empty($_POST["type"]));
-
-        /* Variable */
-        $postcode = $_POST['post_code'];
-        $rooms = $_POST['rooms_number'];
-        $garden = $_POST['garden'];
-        $area = $_POST['area'];
-        $living = $_POST['living_area'];
-        $bathrooms = $_POST['bathrooms_number'];
-        $parking = $_POST['parking'];
-        $pool = $_POST['pool'];
-        $type = $_POST['type'];
-
-
-    
-    ?>
 <!--Script Boostrap-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
