@@ -10,6 +10,7 @@ Subtype of property|property_subtype|str|Bungalow, Office, Garage,...|
 Price|price|int||
 Number of rooms|rooms_number|int|
 Area|area|int|
+Living area|living_area|int|
 Fully equipped kitchen (Yes/No)|kitchen_has|bool|
 Furnished (Yes/No)|furnished|bool|
 Open fire (Yes/No)|open_fire|bool|
