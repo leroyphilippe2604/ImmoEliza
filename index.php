@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col">
                 <!--critere de recherche-->
-                <form class="d-flex flex-column" method="post" action="">
+                <form class="d-flex flex-column" method="post" action="datas.php">
                     <div>
                         <!--Code Postal-->
                         <label for="post_code">Post Code</label>
