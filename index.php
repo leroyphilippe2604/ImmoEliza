@@ -56,6 +56,22 @@
                         <label for="post_code">Post Code</label>
                         <input type="number" class="post_code" name="post_code">
                     </div>
+                    <div class="d-flex align-items-baseline">
+                        <input type="radio" name="type" value="apartment">
+                        <label for="type">Apartment</label>
+                        <input type="radio" name="type" value="house">
+                        <label for="type">House</label>
+                    </div>
+                    <div>
+                        <!--Area-->
+                        <label for="area">Area in ares</label>
+                        <input type="number" class="area" name="area">
+                    </div>
+                    <div>
+                        <!--Living Area-->
+                        <label for="living_area">Living area in ares</label>
+                        <input type="number" class="living_area" name="living_area">
+                    </div>
                     <div>
                         <!--Number rooms-->
                         <label for="rooms_number">Number of rooms</label>
@@ -69,16 +85,7 @@
                         <input type="radio" name="garden" value="no">
                         <label for="garden">No</label>
                     </div>
-                    <div>
-                        <!--Area-->
-                        <label for="area">Area in ares</label>
-                        <input type="number" class="area" name="area">
-                    </div>
-                    <div>
-                        <!--Living Area-->
-                        <label for="living_area">Living area in ares</label>
-                        <input type="number" class="living_area" name="living_area">
-                    </div>
+
                     <div>
                         <!--Number bathrooms-->
                         <label for="bathrooms_number">Number of rooms</label>
@@ -105,12 +112,6 @@
                         <label for="floors_number">Number of floors</label>
                         <input type="number" min="0" max="6" class="floors_number" name="floors">
                         <!--Type of Property-->
-                    </div>
-                    <div class="d-flex align-items-baseline">
-                        <input type="radio" name="type" value="apartment">
-                        <label for="type">Apartment</label>
-                        <input type="radio" name="type" value="house">
-                        <label for="type">House</label>
                     </div>
                     <div>
                         <input type="submit" value="Get an estimate">
