@@ -13,15 +13,15 @@
 
 </head>
 <body>
-<section class="triangle w-100">
-    <!--Triangle SVG-->
-    <div class="above-gradient"></div>
-    <div class='gradient'>
-        <svg viewBox='0 0 100 100' preserveAspectRatio='none' overflow="visible">
-        <polygon points="0,0 0,100 100,0" class="main"/>
-        </svg>
-    </div>
-</section>
+    <section class="triangle w-100">
+        <!--Triangle SVG-->
+        <div class="above-gradient"></div>
+        <div class='gradient'>
+            <svg viewBox='0 0 100 100' preserveAspectRatio='none' overflow="visible">
+            <polygon points="0,0 0,100 100,0" class="main"/>
+            </svg>
+        </div>
+    </section>
     <!--Navbar-->
     <div class="container-fluid">
         <div class="row">
@@ -50,10 +50,10 @@
         </div>
     </div>
     <div class="container">
-        <div class="row mt-4 d-flex align-items-stretch">
-            <div class="col-10 col-md-5 m-auto formulaire pl-1 pl-md-2 pr-0 py-4">
+        <div class="row mt-5">
+            <div class="col-10 col-md-5 mx-auto formulaire pl-1 pl-md-2 pr-0 py-4">
                 <!--critere de recherche-->
-                <form class="col-12 px-0" method="post" action="datas.php">
+                <form class="col-12 px-0" method="post" action="">
                     <!--Code Postal-->
                     <div class="col-12 d-flex">
                         <div class="col-8 d-flex align-items-center mb-1 p-0">
@@ -144,7 +144,7 @@
                         <div class="col-8  p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;Swimming pool
                         </div>
-                        <div class="col-4 d-flex align-items-baseline  p-0">
+                        <div class="col-4 d-flex align-items-baseline p-0">
                             <input type="radio" name="pool" value="yes">
                             <label for="pool">&nbsp;Yes&nbsp;</label>
                             <input type="radio" name="pool" value="no">
@@ -165,12 +165,13 @@
                     </div>
                 </form>      
             </div>
-            <div class="col-xs-8 col-md-5 m-auto reponse">
+            <div class="col-xs-8 col-md-5 m-auto d-flex flex-column reponse">
                 <div>
                     Estimated price HERE
                 </div>
                 <div>
                     3D Vue HERE(Optionnal)
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore cumque, vitae cum sequi, dolor hic esse nihil, tempore nisi animi numquam! Dolorem recusandae, reiciendis soluta vitae voluptates, doloremque fuga delectus commodi ipsum eum cum? Voluptates commodi sint officia qui quasi corrupti iure sit delectus nihil hic nobis, sapiente amet, nulla repellendus molestias dolorem. Incidunt, rerum et? Vel alias expedita perferendis officiis dolorum ullam minus commodi, eius, iure ipsa obcaecati sapiente accusamus. Sunt repudiandae voluptates aperiam. Error blanditiis velit, placeat vel voluptates voluptatibus iste totam pariatur repellendus fuga culpa delectus cupiditate, sunt nesciunt soluta, minima assumenda tenetur nemo non necessitatibus.</p>
                 </div>
             </div>
         </div>
@@ -183,18 +184,14 @@
             </svg>
         </div>
     </section>
-    <!--Partenaire-->
-
-    
     <!--Footer-->
     <div class="container-fluid footer">
         <div class="row">
             <div class="col-12 d-flex py-2">
-                <p class="m-auto">Created by Florence, Frederic, Philippe and Noah @BeCode.org | November 2020
+                <p class="m-auto">Created by Florence, Frederic, Philippe and Noah @BeCode.org | November 2020</p>
             </div>
         </div>
     </div>
-
     <!--Script Boostrap-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
