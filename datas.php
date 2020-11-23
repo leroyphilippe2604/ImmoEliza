@@ -33,29 +33,29 @@
         // filter_var($type, FILTER_VALIDATE_BOOLEAN);
 
         // 2. Validation
-        if (true ==== filter_var($postcode, FILTER_VALIDATE_INT)) {
+        if (true === filter_var($postcode, FILTER_VALIDATE_INT)) {
             //execute
             } else {
-            echo "Please enter a valid post code between 1000 and 9000."
-            };
+            echo "Please enter a valid post code between 1000 and 9000.";
+            }
 
-        if (true ==== filter_var($rooms, FILTER_VALIDATE_INT)) {
+        if (true === filter_var($rooms, FILTER_VALIDATE_INT)) {
             //execute
             } else {
-            echo "Please enter un number."
-            };
+            echo "Please enter un number.";
+            }
 
-        if (true ==== filter_var($living, FILTER_VALIDATE_INT)) {
+        if (true === filter_var($living, FILTER_VALIDATE_INT)) {
             //execute
             } else {
-            echo "Please enter a number in sqm."
-            };
+            echo "Please enter a number in sqm.";
+            }
 
-        if (true ==== filter_var($pool, FILTER_VALIDATE_BOOLEAN)) {
+        if (true === filter_var($pool, FILTER_VALIDATE_BOOLEAN)) {
             //execute
             } else {
-            echo "Please enter if there is a pool or not."
-            };
+            echo "Please enter if there is a pool or not.";
+            }
         
         }
     
