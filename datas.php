@@ -71,7 +71,7 @@
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_TIMEOUT => 5
         ]);
-        
+
         $data = curl_exec($curl);
             if($data === false) {
                 var_dump(curl_error($curl));

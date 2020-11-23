@@ -85,7 +85,7 @@
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="area">Area in ares</label>
                         </div>
                         <div class="col-4 p-0">
-                            <input type="number" min="0" max="200" class="area  w-100" name="area">
+                            <input type="number" min="0" max="200" class="area  w-100" name="area" required>
                         </div>
                     </div>
                     <!--Living Area-->
@@ -103,7 +103,7 @@
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="rooms_number">Number of rooms</label>
                         </div>
                         <div class="col-4 p-0">
-                            <input type="number" min="0" max="12" class="rooms_number  w-100" name="rooms_number">
+                            <input type="number" min="0" max="12" class="rooms_number  w-100" name="rooms_number" required>
                         </div>
                     </div>
                     <!--Garden-->
@@ -124,7 +124,7 @@
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="bathrooms_number">Number of bathrooms</label>
                         </div>
                         <div class="col-4 p-0">
-                            <input type="number" min="1" max="10" class="bathrooms_number  w-100" name="bathrooms_number">
+                            <input type="number" min="1" max="10" class="bathrooms_number  w-100" name="bathrooms_number" required>
                         </div>
                     </div>
                     <!--Parking-->
@@ -157,7 +157,7 @@
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="floors_number">Number of floors</label>
                         </div>
                         <div class="col-4 p-0">
-                            <input type="number" min="0" max="6" class="floors_number w-100" name="floors">
+                            <input type="number" min="0" max="6" class="floors_number w-100" name="floors" required>
                         </div>
                     </div>
                     <div class="col-12 d-flex mt-4">
