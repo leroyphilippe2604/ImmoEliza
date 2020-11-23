@@ -57,10 +57,10 @@
                     <!--Code Postal-->
                     <div class="col-12 d-flex">
                         <div class="col-8 d-flex align-items-center mb-1 p-0">
-                            <i class="fas fa-caret-right"></i>&nbsp;<label for="post_code">Post Code</label>
+                            <i class="fas fa-caret-right"></i>&nbsp;<label for="postal_code">Post Code</label>
                         </div>
                         <div class="col-4 p-0">
-                            <input type="number" min="0" max="6000" class="post_code  w-100" name="post_code">
+                            <input type="number" min="1000" max="9999" class="post_code  w-100" name="postal_code" required>
                         </div>
                     </div>
                     <!--Type of property-->
@@ -91,10 +91,10 @@
                     <!--Living Area-->
                     <div class="col-12 d-flex align-items-center mb-1">
                         <div class="col-8 p-0">
-                            <i class="fas fa-caret-right"></i>&nbsp;<label for="living_area">Living area in sqm</label>
+                            <i class="fas fa-caret-right"></i>&nbsp;<label for="house_m2">Living area in sqm</label>
                         </div>
                         <div class="col-4 p-0">
-                            <input type="number" min="0" max="1000" class="living_area  w-100" name="living_area">
+                            <input type="number" min="0" max="1000" class="living_area  w-100" name="house_m2" required>
                         </div>
                     </div>
                     <!--Number rooms-->
@@ -166,12 +166,13 @@
                 </form>      
             </div>
             <div class="col-xs-8 col-md-5 m-auto d-flex flex-column reponse">
-                <div>
+                <div id="price">
                     Estimated price HERE
                 </div>
-                <div>
+                <div id="datas">
+                    <?php include_once('datas.php'); ?>
                     3D Vue HERE(Optionnal)
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore cumque, vitae cum sequi, dolor hic esse nihil, tempore nisi animi numquam! Dolorem recusandae, reiciendis soluta vitae voluptates, doloremque fuga delectus commodi ipsum eum cum? Voluptates commodi sint officia qui quasi corrupti iure sit delectus nihil hic nobis, sapiente amet, nulla repellendus molestias dolorem. Incidunt, rerum et? Vel alias expedita perferendis officiis dolorum ullam minus commodi, eius, iure ipsa obcaecati sapiente accusamus. Sunt repudiandae voluptates aperiam. Error blanditiis velit, placeat vel voluptates voluptatibus iste totam pariatur repellendus fuga culpa delectus cupiditate, sunt nesciunt soluta, minima assumenda tenetur nemo non necessitatibus.</p>
+                    <p></p>
                 </div>
             </div>
         </div>
