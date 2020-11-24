@@ -1,79 +1,123 @@
 <?php
-        if (isset($_POST["postal_code"], $_POST['house_m2']) ) {
-            echo 'bonjour';
-
-        /*variables à ajouter
-        *$_POST['rooms_number'], $_POST['pool']
-        *!empty($_POST['rooms_number']) && !empty($_POST["pool"])
-
+    $result =[];
+        if (isset($_POST["property_type"], $_POST['land_m2'], $_POST['house_m2'], $_POST['bedrooms_number'], $_POST['garden'], $_POST['terrace'], $_POST['open_fire'], $_POST['postal_code'], $_POST['province'], $_POST['region'] ) ) {
+            echo 'On est dans la boucle';
 
         /* Variable */
-        $postcode = intval($_POST['postal_code']);
-        // $rooms = $_POST['rooms_number'];
+        $property_type = strval($_POST['property_type']);
+        $area = intval($_POST['land_m2']);
         $living = intval($_POST['house_m2']);
-        // $pool = $_POST['pool'];
-        
-        // $type = $_POST['type']; !! Ajouter !empty dans la première condition
-        // $area = $_POST['area'];
-        // $bathrooms = $_POST['bathrooms_number'];
-        // $parking = $_POST['parking'];
+        $bedrooms = intval($_POST['bedrooms_number']);
+        $garden = boolval($_POST['garden']);
+        $terrace = boolval($_POST['terrace']);
+        $open_fire = boolval($_POST['open_fire']);
+        $postcode = intval($_POST['postal_code']);
+        $province = strval($_POST['province']);
+        $region = strval($_POST['region']);
 
-        // 1. Sanitisation
-        // filter_var($postcode, FILTER_VALIDATE_INT);
-        // filter_var($rooms, FILTER_VALIDATE_INT);
-        // filter_var($pool, FILTER_VALIDATE_BOOLEAN);
-        // filter_var($living, FILTER_VALIDATE_INT);
-        // filter_var($type, FILTER_VALIDATE_BOOLEAN);
+        // Validation
+        if (filter_var($property_type, FILTER_SANITIZE_STRING)) {
+            echo ($property_type);
+            $result["property_type"] = $property_type;
+            } else {
+            echo "Please select a property.";
+            }
 
-        // 2. Validation
+        if (filter_var($area, FILTER_VALIDATE_INT)) {
+            $result["land_m2"] = $area;
+            } else {
+            echo "Please enter a number.";
+            }
+
+        if (filter_var($living, FILTER_VALIDATE_INT)) {
+            $result["house_m2"] = $living;
+            } else {
+            echo "Please enter a number in sqm.";
+            }       
+
+        if (filter_var($bedrooms, FILTER_VALIDATE_INT)) {
+            $result["bedrooms_number"] = $bedrooms;
+            } else {
+            echo "Please enter a number.";
+            }
+
+        if (filter_var($garden, FILTER_VALIDATE_BOOLEAN)) {
+            echo ($garden);
+            $result["garden"] = $garden;
+            } else {
+            echo "Please select a garden.";
+            }
+
+        if (filter_var($terrace, FILTER_VALIDATE_BOOLEAN)) {
+            echo ($terrace);
+            $result["terrace"] = $terrace;
+            } else {
+            echo "Please select a terrace.";
+            }
+
+        if (filter_var($open_fire, FILTER_VALIDATE_BOOLEAN)) {
+            echo ($open_fire);
+            $result["open_fire"] = $open_fire;
+            } else {
+            echo "Please select a open_fire.";
+            }
+
         if (filter_var($postcode, FILTER_VALIDATE_INT)) {
             echo ($postcode);
+            $result["postal_code"] = $postcode;
             } else {
             echo "Please enter a valid post code between 1000 and 9000.";
             }
 
-        // if (true === filter_var($rooms, FILTER_VALIDATE_INT)) {
-        //     //execute
-        //     } else {
-        //     echo "Please enter un number.";
-        //     }
-
-        if (filter_var($living, FILTER_VALIDATE_INT)) {
-            echo ($living);
+        if (filter_var($province, FILTER_SANITIZE_STRING)) {
+            echo ($province);
+            $result["province"] = $province;
             } else {
-            echo "Please enter a number in sqm.";
+            echo "Please select a province.";
             }
 
-        // if (true === filter_var($pool, FILTER_VALIDATE_BOOLEAN)) {
-        //     //execute
-        //     } else {
-        //     echo "Please enter if there is a pool or not."
-        //     }
-        
-        }
+        if (filter_var($region, FILTER_SANITIZE_STRING)) {
+            echo ($region);
+            $result["region"] = $region;
+            } else {
+            echo "Please select a region.";
+            }
+
+        $result = json_encode($result);
+        echo $result;
 
         $curl = curl_init('https://api.wallonia.ml/v1/price');
-        curl_setopt_array($curl, [
+
+        curl_setopt_array($curl, array (
+            CURLOPT_RETURNTRANSFER => true, //renvoie les infos
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
             CURLOPT_CAINFO => __DIR__ . '/certificat/cert.cer',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_TIMEOUT => 5
-        ]);
-
+            // CURLOPT_SSL_VERIFYPEER => false, //ne tient pas compte du SSL(certificat)
+            CURLOPT_TIMEOUT => 0, //attend le temps qu'il faut
+            CURLOPT_FOLLOWLOCATION => false, //autorise pas de redirection
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST', //methode utilisée (vs GET par défaut)
+            CURLOPT_POSTFIELDS => $result, //variable JSON
+            CURLOPT_HTTPHEADER => array( // indique le type de postfield = body (ici json); "Array" car on peut envoyer plusieurs paramètres dans le header
+                'Content-Type: application/json'
+            )
+        ));
+        
         $data = curl_exec($curl);
-            if($data === false) {
-                var_dump(curl_error($curl));
-            }else{
-                if(curl_getinfo($curl, CURLINFO_HTTP_CODE) === 200) {
-                    $data = json_decode($data, true);
-                    echo 'The estimated price is ' . $data . '.';
-                }
-            }
-        curl_close($curl);
+        $data = json_decode($data, true);
+        echo curl_error($curl);
+        echo 'The estimated price is ' . $data . '.';
 
-        // if(curl) {
-        //     curl_easy_setopt(curl, CURLOPT_URL, "https://example.com/%22);
-        //     curl_easy_setopt(curl, CURLOPT_CAINFO, "/etc/certs/cabundle.pem");
-        //     ret = curl_easy_perform(curl);
-        //     curl_easy_cleanup(curl);
-    
+            // if($data === false) {
+            //    echo curl_error($curl);
+            // }else{
+            //     if(curl_getinfo($curl, CURLINFO_HTTP_CODE) === 200) {
+            //         $data = json_decode($data, true);
+            //         echo 'The estimated price is ' . $data . '.';
+            //     }
+            // }
+        
+        curl_close($curl);
+    }
     ?>
