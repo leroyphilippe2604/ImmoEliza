@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <base href="https://immo-eliza.herokuapp.com/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ElizaImmo</title>
@@ -85,7 +86,7 @@
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="area">Area in ares</label>
                         </div>
                         <div class="col-4 p-0">
-                            <input type="number" min="0" max="200" class="area  w-100" name="area" required>
+                            <input type="number" min="0" max="200" class="area  w-100" name="area">
                         </div>
                     </div>
                     <!--Living Area-->
@@ -103,7 +104,7 @@
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="rooms_number">Number of rooms</label>
                         </div>
                         <div class="col-4 p-0">
-                            <input type="number" min="0" max="12" class="rooms_number  w-100" name="rooms_number" required>
+                            <input type="number" min="0" max="12" class="rooms_number  w-100" name="rooms_number">
                         </div>
                     </div>
                     <!--Garden-->
@@ -124,7 +125,7 @@
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="bathrooms_number">Number of bathrooms</label>
                         </div>
                         <div class="col-4 p-0">
-                            <input type="number" min="1" max="10" class="bathrooms_number  w-100" name="bathrooms_number" required>
+                            <input type="number" min="1" max="10" class="bathrooms_number  w-100" name="bathrooms_number">
                         </div>
                     </div>
                     <!--Parking-->
@@ -157,7 +158,7 @@
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="floors_number">Number of floors</label>
                         </div>
                         <div class="col-4 p-0">
-                            <input type="number" min="0" max="6" class="floors_number w-100" name="floors" required>
+                            <input type="number" min="0" max="6" class="floors_number w-100" name="floors">
                         </div>
                     </div>
                     <div class="col-12 d-flex mt-4">
