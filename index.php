@@ -70,6 +70,15 @@
                             </div>
                         </div>
                     </div>
+                    <!--Number facades-->
+                    <div class="col-12 d-flex align-items-center mb-1">
+                        <div class="col-8 p-0">
+                            <i class="fas fa-caret-right"></i>&nbsp;<label for="facades_number">Number of facades</label>
+                        </div>
+                        <div class="col-4 p-0">
+                            <input type="number" min="0" max="12" class="rooms_number  w-100" name="facades_number" required>
+                        </div>
+                    </div>
                     <!--Area-->
                     <div class="col-12 d-flex align-items-center mb-1">
                         <div class="col-8 p-0">
@@ -97,6 +106,7 @@
                             <input type="number" min="0" max="12" class="rooms_number  w-100" name="bedrooms_number" required>
                         </div>
                     </div>
+                    
                     <!--Garden-->
                     <div class="col-12 d-flex align-items-center mb-1">
                         <div class="col-8 p-0">

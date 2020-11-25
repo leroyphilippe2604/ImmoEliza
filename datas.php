@@ -1,10 +1,11 @@
 <?php
     $result =[];
-        if (isset($_POST["property_type"], $_POST['land_m2'], $_POST['house_m2'], $_POST['bedrooms_number'], $_POST['garden'], $_POST['terrace'], $_POST['open_fire'], $_POST['postal_code'], $_POST['province'], $_POST['region'] ) ) {
+        if (isset($_POST["property_type"],$_POST['facades_number'], $_POST['land_m2'], $_POST['house_m2'], $_POST['bedrooms_number'], $_POST['garden'], $_POST['terrace'], $_POST['open_fire'], $_POST['postal_code'], $_POST['province'], $_POST['region'] ) ) {
             echo 'On est dans la boucle';
 
         /* Variable */
         $property_type = strval($_POST['property_type']);
+        $facades = intval($_POST['facades_number']);
         $area = intval($_POST['land_m2']);
         $living = intval($_POST['house_m2']);
         $bedrooms = intval($_POST['bedrooms_number']);
@@ -22,6 +23,11 @@
             } else {
             echo "Please select a property.";
             }
+            if (filter_var($bedrooms, FILTER_VALIDATE_INT)) {
+                $result["facades_number"] = $facade;
+                } else {
+                echo "Please enter a number.";
+                }
 
         if (filter_var($area, FILTER_VALIDATE_INT)) {
             $result["land_m2"] = $area;
@@ -40,6 +46,7 @@
             } else {
             echo "Please enter a number.";
             }
+       
 
         if (filter_var($garden, FILTER_VALIDATE_BOOLEAN)) {
             echo ($garden);
@@ -47,7 +54,7 @@
             } else {
             echo "Please select a garden.";
             }
-
+d
         if (filter_var($terrace, FILTER_VALIDATE_BOOLEAN)) {
             echo ($terrace);
             $result["terrace"] = $terrace;
