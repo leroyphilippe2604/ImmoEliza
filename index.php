@@ -55,7 +55,7 @@
                 <!--critere de recherche-->
                 <form class="col-12 px-0" method="post" action="">
                     <!--Type of property-->
-                    <div class="col-12 d-flex align-items-center mb-1">
+                    <div class="col-12 d-flex align-items-start mb-1">
                         <div class="col-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;Type of property
                         </div>
@@ -91,7 +91,7 @@
                     <!--Living Area-->
                     <div class="col-12 d-flex align-items-center mb-1">
                         <div class="col-6 p-0">
-                            <i class="fas fa-caret-right"></i>&nbsp;<label for="house_m2">Living area in sqm</label>
+                            <i class="fas fa-caret-right"></i>&nbsp;<label for="house_m2">Living area (sqm)</label>
                         </div>
                         <div class="col-6 p-0">
                             <input type="number" min="1" max="1000" class="living_area  w-100" name="house_m2" value="1" required>
