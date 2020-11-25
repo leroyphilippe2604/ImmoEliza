@@ -13,15 +13,6 @@
 
 </head>
 <body>
-    <section class="triangle w-100">
-        <!--Triangle SVG-->
-        <div class="above-gradient"></div>
-        <div class='gradient'>
-            <svg viewBox='0 0 100 100' preserveAspectRatio='none' overflow="visible">
-            <polygon points="0,0 0,100 100,0" class="main"/>
-            </svg>
-        </div>
-    </section>
     <!--Navbar-->
     <div class="container-fluid">
         <div class="row">
@@ -49,8 +40,17 @@
             </div>
         </div>
     </div>
+    <section class="triangle w-100">
+        <!--Triangle SVG-->
+        <div class="above-gradient"></div>
+        <div class='gradient'>
+            <svg viewBox='0 0 100 100' preserveAspectRatio='none' overflow="visible">
+            <polygon points="0,0 0,100 100,0" class="main"/>
+            </svg>
+        </div>
+    </section>
     <div class="container">
-        <div class="row mt-5">
+        <div class="row d-flex align-items-start mt-5">
             <div class="col-10 col-md-6 mx-auto formulaire pl-1 pl-md-2 pr-0 py-4">
                 <!--critere de recherche-->
                 <form class="col-12 px-0" method="post" action="">
@@ -59,10 +59,10 @@
                         <div class="col-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;Type of property
                         </div>
-                        <div class="col-6 d-flex flex-column align-items-baseline p-0">
+                        <div class="col-6 d-flex flex-wrap align-items-baseline p-0">
                             <div>
                                 <input type="radio" name="property_type" value="apartment" checked>
-                                <label for="property_type">&nbsp;Apart</label>
+                                <label for="property_type">&nbsp;Apart&nbsp;</label>
                             </div>
                             <div>
                                 <input type="radio" name="property_type" value="house">
@@ -100,7 +100,7 @@
                     <!--Number bedrooms-->
                     <div class="col-12 d-flex align-items-center mb-1">
                         <div class="col-6 p-0">
-                            <i class="fas fa-caret-right"></i>&nbsp;<label for="bedrooms_number">Number of bedrooms</label>
+                            <i class="fas fa-caret-right"></i>&nbsp;<label for="bedrooms_number">Nbr of bedrooms</label>
                         </div>
                         <div class="col-6 p-0">
                             <input type="number" min="1" max="12" class="rooms_number  w-100" name="bedrooms_number" value="1" required>
@@ -153,10 +153,10 @@
                         </div>
                     </div>
                     <!--Province-->
-                    <div class="col-12 row px-5 d-flex align-items-center mb-1">
-                        <div class="col-12 col-md-6  p-0"><i class="fas fa-caret-right"></i>&nbsp;<label for="province">Choose a province</label>
+                    <div class="col-12 d-flex align-items-center mb-1 flex-wrap">
+                        <div class="col-12 col-sm-6 p-0"><i class="fas fa-caret-right"></i>&nbsp;<label for="province">Choose a province</label>
                         </div>
-                        <div class="col-12 col-md-6 d-flex align-items-baseline p-0">
+                        <div class="col-12 col-sm-6 d-flex align-items-baseline p-0">
                             <select name="province">
                                 <option value="anvers" selected>Anvers</option>
                                 <option value="limbourg">Limbourg</option>
@@ -173,11 +173,11 @@
                         </div>
                     </div>
                     <!--Region-->
-                    <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-6 p-0">
+                    <div class="col-12 d-flex align-items-start mb-1 flex-wrap">
+                        <div class="col-12 col-sm-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;Region
                         </div>
-                        <div class="col-6 d-flex flex-column align-items-baseline p-0">
+                        <div class="col-12 col-sm-6 p-0">
                             <div>
                                 <input type="radio" name="region" value="flandre" checked>
                                 <label for="type">&nbsp;Flandres</label>
@@ -197,12 +197,15 @@
                     </div>
                 </form>      
             </div>
-            <div class="col-xs-8 col-md-3 m-auto d-flex flex-column reponse">
+            <div class="d-md-none space"></div>
+            <div class="col-10 col-md-4 mx-auto pl-1 pl-md-2 pr-0 py-4 d-flex flex-column reponse">
                 <div id="price">
-                    Estimated price HERE
+                    <p class="h2 text-center">The estimate price</p>
                 </div>
                 <div id="datas">
-                    <p><?php include_once('datas.php'); ?>
+                    <p class="text-center">The estimated price is <span class="h4">
+                        <?php include_once('datas.php'); ?>
+                        </span> euros.
                     </p>
                 </div>
             </div>
@@ -215,9 +218,10 @@
             <polygon points="0,100 100,100 100,0" class="main"/>
             </svg>
         </div>
+        <div class="above-gradient"></div>
     </section>
     <!--Footer-->
-    <div class="container-fluid footer">
+    <div class="container-fluid footer mt-5">
         <div class="row">
             <div class="col-12 d-flex py-2">
                 <p class="m-auto">Created by Florence, Frederic, Philippe and Noah @BeCode.org | November 2020</p>

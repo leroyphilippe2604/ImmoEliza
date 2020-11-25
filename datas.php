@@ -108,7 +108,7 @@ $data = curl_exec($curl);
 $data = json_decode($data, true);
 
 echo curl_error($curl);
-echo 'The estimated price is ' . $data["price"] . ' euros.';
+echo $data["price"];
 
 curl_close($curl);
 
