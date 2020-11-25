@@ -67,6 +67,10 @@ img.logo {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
+.formulaire {
+    margin-bottom: 10rem;
+}
+
 input {
     border-width: 1px;
     border-color: #414ec4;
@@ -91,13 +95,13 @@ i.fas {
 /*Footer*/
 
 .triangleBottom {
-    position : absolute;
+    position : relative;
     bottom:2.5rem;
     z-index: -1;
 }
 
 .footer {
-    position : absolute;
+    position : relative;
     bottom:0;
     background-color: $blue;
     color : white;

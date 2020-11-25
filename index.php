@@ -51,17 +51,17 @@
     </div>
     <div class="container">
         <div class="row mt-5">
-            <div class="col-10 col-md-5 mx-auto formulaire pl-1 pl-md-2 pr-0 py-4">
+            <div class="col-10 col-md-6 mx-auto formulaire pl-1 pl-md-2 pr-0 py-4">
                 <!--critere de recherche-->
                 <form class="col-12 px-0" method="post" action="">
                     <!--Type of property-->
                     <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-8 p-0">
+                        <div class="col-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;Type of property
                         </div>
-                        <div class="col-4 d-flex flex-column align-items-baseline p-0">
+                        <div class="col-6 d-flex flex-column align-items-baseline p-0">
                             <div>
-                                <input type="radio" name="property_type" value="apartment">
+                                <input type="radio" name="property_type" value="apartment" checked>
                                 <label for="property_type">&nbsp;Apart</label>
                             </div>
                             <div>
@@ -72,94 +72,93 @@
                     </div>
                     <!-- Number facades -->
                     <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-8 p-0">
+                        <div class="col-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="facades_number">Number of facades</label>
                         </div>
-                        <div class="col-4 p-0">
-                            <input type="number" min="0" max="12" class="rooms_number  w-100" name="facades_number" required>
+                        <div class="col-6 p-0">
+                            <input type="number" min="1" max="12" class="rooms_number  w-100" name="facades_number" value="1" required>
                         </div>
                     </div>
                     <!--Area-->
                     <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-8 p-0">
+                        <div class="col-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="land_m2">Area in ares</label>
                         </div>
-                        <div class="col-4 p-0">
-                            <input type="number" min="0" max="2000000" class="area  w-100" name="land_m2">
+                        <div class="col-6 p-0">
+                            <input type="number" min="1" max="2000000" class="area  w-100" name="land_m2" value="1">
                         </div>
                     </div>
                     <!--Living Area-->
                     <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-8 p-0">
+                        <div class="col-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="house_m2">Living area in sqm</label>
                         </div>
-                        <div class="col-4 p-0">
-                            <input type="number" min="0" max="1000" class="living_area  w-100" name="house_m2" required>
+                        <div class="col-6 p-0">
+                            <input type="number" min="1" max="1000" class="living_area  w-100" name="house_m2" value="1" required>
                         </div>
                     </div>
-                    <!--Number rooms-->
+                    <!--Number bedrooms-->
                     <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-8 p-0">
+                        <div class="col-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="bedrooms_number">Number of bedrooms</label>
                         </div>
-                        <div class="col-4 p-0">
-                            <input type="number" min="0" max="12" class="rooms_number  w-100" name="bedrooms_number" required>
+                        <div class="col-6 p-0">
+                            <input type="number" min="1" max="12" class="rooms_number  w-100" name="bedrooms_number" value="1" required>
                         </div>
                     </div>
                     
                     <!--Garden-->
                     <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-8 p-0">
+                        <div class="col-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;Garden
                         </div>
-                        <div class="col-4 d-flex align-items-baseline p-0">
+                        <div class="col-6 d-flex align-items-baseline p-0">
                             <input type="radio" name="garden" value="yes">
                             <label for="garden">&nbsp;Yes&nbsp;</label>
-                            <input type="radio" name="garden" value="no">
+                            <input type="radio" name="garden" value="no" checked>
                             <label for="garden">&nbsp;No</label>
                         </div>
                     </div>
                     <!--Terrasse-->
                     <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-8 p-0">
+                        <div class="col-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;Terrace                               
                         </div>
-                        <div class="col-4 d-flex align-items-baseline  p-0">
+                        <div class="col-6 d-flex align-items-baseline  p-0">
                             <input type="radio" name="terrace" value="yes">
                             <label for="terrace">&nbsp;Yes&nbsp;</label>
-                            <input type="radio" name="terrace" value="no">
+                            <input type="radio" name="terrace" value="no" checked>
                             <label for="terrace">&nbsp;No</label>
                         </div>
                     </div>
                     <!--Open Fire-->
                     <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-8  p-0">
+                        <div class="col-6  p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;Open fire
                         </div>
-                        <div class="col-4 d-flex align-items-baseline p-0">
+                        <div class="col-6 d-flex align-items-baseline p-0">
                             <input type="radio" name="open_fire" value="yes">
                             <label for="open_fire">&nbsp;Yes&nbsp;</label>
-                            <input type="radio" name="open_fire" value="no">
+                            <input type="radio" name="open_fire" value="no" checked>
                             <label for="open_fire">&nbsp;No</label>
                         </div>
                     </div>
                     <!--Code Postal-->
                     <div class="col-12 d-flex">
-                        <div class="col-8 d-flex align-items-center mb-1 p-0">
+                        <div class="col-6 d-flex align-items-center mb-1 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="postal_code">Post Code</label>
                         </div>
-                        <div class="col-4 p-0">
+                        <div class="col-6 p-0">
                             <input type="number" min="1000" max="9999" class="post_code  w-100" name="postal_code" required>
                         </div>
                     </div>
                     <!--Province-->
-                    <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-8  p-0"><i class="fas fa-caret-right"></i>&nbsp;<label for="province">Choose a province</label>
+                    <div class="col-12 row px-5 d-flex align-items-center mb-1">
+                        <div class="col-12 col-md-6  p-0"><i class="fas fa-caret-right"></i>&nbsp;<label for="province">Choose a province</label>
                         </div>
-                        <div class="col-4 d-flex align-items-baseline p-0">
+                        <div class="col-12 col-md-6 d-flex align-items-baseline p-0">
                             <select name="province">
-                                <option value="">--Please choose a Province--</option>
-                                <option value="anvers">Anvers</option>
+                                <option value="anvers" selected>Anvers</option>
                                 <option value="limbourg">Limbourg</option>
                                 <option value="flandre-orientale">Flandre-orientale</option>
                                 <option value="flandre-occidentale">Flandre-occidentale</option>
@@ -173,14 +172,14 @@
                             </select>
                         </div>
                     </div>
-                    <!--Type of property-->
+                    <!--Region-->
                     <div class="col-12 d-flex align-items-center mb-1">
-                        <div class="col-8 p-0">
+                        <div class="col-6 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;Region
                         </div>
-                        <div class="col-4 d-flex flex-column align-items-baseline p-0">
+                        <div class="col-6 d-flex flex-column align-items-baseline p-0">
                             <div>
-                                <input type="radio" name="region" value="flandre">
+                                <input type="radio" name="region" value="flandre" checked>
                                 <label for="type">&nbsp;Flandres</label>
                             </div>
                             <div>
@@ -198,14 +197,13 @@
                     </div>
                 </form>      
             </div>
-            <div class="col-xs-8 col-md-5 m-auto d-flex flex-column reponse">
+            <div class="col-xs-8 col-md-3 m-auto d-flex flex-column reponse">
                 <div id="price">
                     Estimated price HERE
                 </div>
                 <div id="datas">
-                    <?php include_once('datas.php'); ?>
-                    3D Vue HERE(Optionnal)
-                    <p></p>
+                    <p><?php include_once('datas.php'); ?>
+                    </p>
                 </div>
             </div>
         </div>

@@ -65,6 +65,10 @@ img.logo {
   border-radius: 10px;
 }
 
+.formulaire {
+  margin-bottom : 8rem;
+}
+
 input {
   border-width: 1px;
   border-color: #414ec4;
