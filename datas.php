@@ -1,7 +1,8 @@
 <?php
     $result =[];
-        if (isset($_POST["property_type"],$_POST['facades_number'], $_POST['land_m2'], $_POST['house_m2'], $_POST['bedrooms_number'], $_POST['garden'], $_POST['terrace'], $_POST['open_fire'], $_POST['postal_code'], $_POST['province'], $_POST['region'] ) ) {
-            echo 'On est dans la boucle';
+        if (isset($_POST["property_type"], $_POST['facades_number'], $_POST['land_m2'], $_POST['house_m2'], $_POST['bedrooms_number'], $_POST['garden'], $_POST['terrace'], $_POST['open_fire'], $_POST['postal_code'], $_POST['province'], $_POST['region'] ) ) {
+        
+        echo 'On est dans la boucle';
 
         /* Variable */
         $property_type = strval($_POST['property_type']);
@@ -23,11 +24,12 @@
             } else {
             echo "Please select a property.";
             }
-            if (filter_var($bedrooms, FILTER_VALIDATE_INT)) {
-                $result["facades_number"] = $facade;
-                } else {
-                echo "Please enter a number.";
-                }
+
+        if (filter_var($facades, FILTER_VALIDATE_INT)) {
+            $result["facades_number"] = $facades;
+            } else {
+            echo "Please enter a number.";
+            }
 
         if (filter_var($area, FILTER_VALIDATE_INT)) {
             $result["land_m2"] = $area;
@@ -54,7 +56,7 @@
             } else {
             echo "Please select a garden.";
             }
-d
+
         if (filter_var($terrace, FILTER_VALIDATE_BOOLEAN)) {
             echo ($terrace);
             $result["terrace"] = $terrace;
@@ -115,7 +117,8 @@ d
         $data = json_decode($data, true);
         echo curl_error($curl);
         echo 'The estimated price is ' . $data . '.';
-
+        var_dump($result);
+        echo($result);
             // if($data === false) {
             //    echo curl_error($curl);
             // }else{

@@ -70,7 +70,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Number facades-->
+                    <!-- Number facades -->
                     <div class="col-12 d-flex align-items-center mb-1">
                         <div class="col-8 p-0">
                             <i class="fas fa-caret-right"></i>&nbsp;<label for="facades_number">Number of facades</label>
