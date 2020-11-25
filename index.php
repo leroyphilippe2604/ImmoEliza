@@ -180,7 +180,7 @@
                         <div class="col-12 col-sm-6 p-0">
                             <div>
                                 <input type="radio" name="region" value="flandre" checked>
-                                <label for="type">&nbsp;Flandres</label>
+                                <label for="type">&nbsp;Flanders</label>
                             </div>
                             <div>
                                 <input type="radio" name="region" value="wallonie">
@@ -188,7 +188,7 @@
                             </div>
                             <div>
                                 <input type="radio" name="region" value="bruxelles-capitale">
-                                <label for="type">&nbsp;Bruxelles-Capitale</label>
+                                <label for="type">&nbsp;Brussels</label>
                             </div>
                         </div>
                     </div>
