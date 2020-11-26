@@ -62,7 +62,7 @@
                         <div class="col-6 d-flex flex-wrap align-items-baseline p-0">
                             <div>
                                 <input type="radio" name="property_type" value="apartment" checked>
-                                <label for="property_type">&nbsp;Apart&nbsp;</label>
+                                <label for="property_type">&nbsp;Apartment/Flat&nbsp;</label>
                             </div>
                             <div>
                                 <input type="radio" name="property_type" value="house">
@@ -146,7 +146,7 @@
                     <!--Code Postal-->
                     <div class="col-12 d-flex">
                         <div class="col-6 d-flex align-items-center mb-1 p-0">
-                            <i class="fas fa-caret-right"></i>&nbsp;<label for="postal_code">Post Code</label>
+                            <i class="fas fa-caret-right"></i>&nbsp;<label for="postal_code">Postcode</label>
                         </div>
                         <div class="col-6 p-0">
                             <input type="number" min="1000" max="9999" class="post_code  w-100" name="postal_code" required>
@@ -225,6 +225,7 @@
         <div class="row">
             <div class="col-12 d-flex py-2">
                 <p class="m-auto">Created by Florence, Frederic, Philippe and Noah @BeCode.org | November 2020</p>
+                <!-- On devrait mettre nos noms comme link vers notre github et inclure joffrey -->
             </div>
         </div>
     </div>
