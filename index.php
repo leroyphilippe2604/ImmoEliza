@@ -198,7 +198,7 @@
                 </form>      
             </div>
             <div class="d-md-none space"></div>
-            <div class="col-10 col-md-4 mx-auto pl-1 pl-md-2 pr-0 py-4 d-flex flex-column reponse">
+            <div class="col-10 col-md-4 mx-auto mb-5 pl-1 pl-md-2 pr-0 py-4 d-flex flex-column reponse">
                 <div id="price">
                     <p class="h2 text-center">The estimate price</p>
                 </div>
@@ -221,6 +221,7 @@
         <div class="above-gradient"></div>
     </section>
     <!--Footer-->
+    <div class="footerReplace"></div>
     <div class="container-fluid footer mt-5">
         <div class="row">
             <div class="col-12 d-flex py-2">
