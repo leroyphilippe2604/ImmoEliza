@@ -13,6 +13,20 @@
 
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+phpinfo();
+die();
+        if (isset($_POST["post_code"], $_POST['rooms_number'], $_POST['living_area'], $_POST['pool']) && !empty($_POST['post_code']) && !empty($_POST['rooms_number']) && !empty($_POST["living_area"]) && !empty($_POST["pool"])) {
+
+        /* Variable */
+        $postcode = $_POST['post_code'];
+        $rooms = $_POST['rooms_number'];
+        $living = $_POST['living_area'];
+        $pool = $_POST['pool'];
+=======
+>>>>>>> 98c82990d06acb2370f6e7f0df88a530d5224dba
         if (isset($_POST["postal_code"], $_POST['house_m2']) ) {
             echo 'bonjour';
 
@@ -26,6 +40,7 @@
         // $rooms = $_POST['rooms_number'];
         $living = intval($_POST['house_m2']);
         // $pool = $_POST['pool'];
+<<<<<<< HEAD
 =======
 
 phpinfo();
@@ -38,6 +53,9 @@ die();
         $living = $_POST['living_area'];
         $pool = $_POST['pool'];
 >>>>>>> bla
+=======
+>>>>>>> main
+>>>>>>> 98c82990d06acb2370f6e7f0df88a530d5224dba
         
         // $type = $_POST['type']; !! Ajouter !empty dans la première condition
         // $area = $_POST['area'];
@@ -46,6 +64,19 @@ die();
 
         // 1. Sanitisation
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        filter_var($postcode, FILTER_VALIDATE_INT);
+        filter_var($rooms, FILTER_VALIDATE_INT);
+        filter_var($pool, FILTER_VALIDATE_BOOLEAN);
+        filter_var($living, FILTER_VALIDATE_INT);
+        // filter_var($type, FILTER_VALIDATE_BOOLEAN);
+
+        // 2. Validation
+        if (true === filter_var($postcode, FILTER_VALIDATE_INT)) {
+            //execute
+=======
+>>>>>>> 98c82990d06acb2370f6e7f0df88a530d5224dba
         // filter_var($postcode, FILTER_VALIDATE_INT);
         // filter_var($rooms, FILTER_VALIDATE_INT);
         // filter_var($pool, FILTER_VALIDATE_BOOLEAN);
@@ -55,6 +86,7 @@ die();
         // 2. Validation
         if (filter_var($postcode, FILTER_VALIDATE_INT)) {
             echo ($postcode);
+<<<<<<< HEAD
 =======
         filter_var($postcode, FILTER_VALIDATE_INT);
         filter_var($rooms, FILTER_VALIDATE_INT);
@@ -66,11 +98,26 @@ die();
         if (true === filter_var($postcode, FILTER_VALIDATE_INT)) {
             //execute
 >>>>>>> bla
+=======
+>>>>>>> main
+>>>>>>> 98c82990d06acb2370f6e7f0df88a530d5224dba
             } else {
             echo "Please enter a valid post code between 1000 and 9000.";
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        if (true === filter_var($rooms, FILTER_VALIDATE_INT)) {
+            //execute
+            } else {
+            echo "Please enter un number.";
+            }
+
+        if (true === filter_var($living, FILTER_VALIDATE_INT)) {
+            //execute
+=======
+>>>>>>> 98c82990d06acb2370f6e7f0df88a530d5224dba
         // if (true === filter_var($rooms, FILTER_VALIDATE_INT)) {
         //     //execute
         //     } else {
@@ -79,6 +126,7 @@ die();
 
         if (filter_var($living, FILTER_VALIDATE_INT)) {
             echo ($living);
+<<<<<<< HEAD
 =======
         if (true === filter_var($rooms, FILTER_VALIDATE_INT)) {
             //execute
@@ -89,11 +137,25 @@ die();
         if (true === filter_var($living, FILTER_VALIDATE_INT)) {
             //execute
 >>>>>>> bla
+=======
+>>>>>>> main
+>>>>>>> 98c82990d06acb2370f6e7f0df88a530d5224dba
             } else {
             echo "Please enter a number in sqm.";
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        if (true === filter_var($pool, FILTER_VALIDATE_BOOLEAN)) {
+            //execute
+            } else {
+            echo "Please enter if there is a pool or not.";
+            }
+        
+        }
+=======
+>>>>>>> 98c82990d06acb2370f6e7f0df88a530d5224dba
         // if (true === filter_var($pool, FILTER_VALIDATE_BOOLEAN)) {
         //     //execute
         //     } else {
@@ -125,6 +187,7 @@ die();
         //     curl_easy_setopt(curl, CURLOPT_CAINFO, "/etc/certs/cabundle.pem");
         //     ret = curl_easy_perform(curl);
         //     curl_easy_cleanup(curl);
+<<<<<<< HEAD
 =======
         if (true === filter_var($pool, FILTER_VALIDATE_BOOLEAN)) {
             //execute
@@ -134,6 +197,9 @@ die();
         
         }
 >>>>>>> bla
+=======
+>>>>>>> main
+>>>>>>> 98c82990d06acb2370f6e7f0df88a530d5224dba
     
     ?>
     
