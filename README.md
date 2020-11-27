@@ -4,10 +4,10 @@
 November 2020
 
 ## Collaborators
-[Florence](https://github.com/FlorenceJacobs)
-[Frederic](https://github.com/FredericSanchezBeCode)
-[Joffrey](https://github.com/Joffreybvn)
-[Philippe](https://github.com/leroyphilippe2604)
+- [Florence](https://github.com/FlorenceJacobs)
+- [Frederic](https://github.com/FredericSanchezBeCode)
+- [Joffrey](https://github.com/Joffreybvn)
+- [Philippe](https://github.com/leroyphilippe2604)
 
 ## Missions
 - The AI developers will create an API for the needed of this application.The web developers will develop an interface for the client "ImmoElize". The main process is about a collaboration between the AI and the web dev, you all have to sync both in order to know how to construct the form. The result of the request must return a price.
