@@ -31,17 +31,17 @@ November 2020
 
 # ImmoEliza
 Datas's types for API:
-information|column name|variable type|
----|---|---|---
-Region|Region|str|
-Province|Province|str|
-Postcode|postcode|int|
-Type of property (House/apartment)|property_type|bool|
-Number of bedrooms|bedrooms_number|int|
-Area|land_m2|int|
-Living area|house_m2|int|
-Open fire (Yes/No)|open_fire|bool|
-Terrace (Yes/No)|terrace|bool|
-Garden (Yes/No)|garden|bool|
-Number of facades|facades_number|int|
-**Price|price|int||**
+|information|column name|variable type|
+|---|---|---|
+|Region|Region|str|
+|Province|Province|str|
+|Postcode|postcode|int|
+|Type of property (House/apartment)|property_type|bool|
+|Number of bedrooms|bedrooms_number|int|
+|Area|land_m2|int|
+|Living area|house_m2|int|
+|Open fire (Yes/No)|open_fire|bool|
+|Terrace (Yes/No)|terrace|bool|
+|Garden (Yes/No)|garden|bool|
+|Number of facades|facades_number|int|
+|**Price|price|int|**
